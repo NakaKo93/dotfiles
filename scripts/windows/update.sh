@@ -19,3 +19,6 @@ update_file() {
 # bash
 update_file "$HOME/.bash_profile" "$DOTFILES/bash/.bash_profile"
 update_file "$HOME/.bashrc"       "$DOTFILES/bash/.bashrc"
+
+# git ssh
+update_file "$HOME/.ssh/config.example" "$DOTFILES/ssh/.ssh/config.example"

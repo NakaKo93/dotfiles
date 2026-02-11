@@ -21,3 +21,6 @@ install_file() {
 # bash
 install_file "$DOTFILES/.bash_profile" "$HOME/.bash_profile"
 install_file "$DOTFILES/.bashrc"       "$HOME/.bashrc"
+
+# git ssh
+install_file "$DOTFILES/ssh/.ssh/config.example" "$HOME/.ssh/config.example"
