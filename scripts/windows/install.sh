@@ -24,3 +24,11 @@ install_file "$DOTFILES/.bashrc"       "$HOME/.bashrc"
 
 # git ssh
 install_file "$DOTFILES/ssh/.ssh/config.example" "$HOME/.ssh/config.example"
+
+# zshrc
+install_file "$DOTFILES/zsh/.zshrc" "$HOME/.zshrc"
+
+# z
+if [ ! -d "$HOME/.z" ]; then
+  git clone https://github.com/rupa/z.git "$HOME/.z"
+fi

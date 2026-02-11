@@ -22,3 +22,6 @@ update_file "$HOME/.bashrc"       "$DOTFILES/bash/.bashrc"
 
 # git ssh
 update_file "$HOME/.ssh/config.example" "$DOTFILES/ssh/.ssh/config.example"
+
+# zshrc
+update_file "$HOME/.zshrc" "$DOTFILES/zsh/.zshrc"
