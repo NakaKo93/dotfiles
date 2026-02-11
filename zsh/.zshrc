@@ -41,8 +41,7 @@ mkcd() { mkdir -p "$1" && cd "$1" }
 
 # ----- z (directory jump) -----
 export _Z_CMD="z"
-export _Z_DATA="$HOME/.z"
-[ -r "$HOME/.z/z.sh" ] && source "$HOME/.z/z.sh"
+[ -r "$HOME/z/z.sh" ] && source "$HOME/z/z.sh"
 
 # ----- Completion -----
 autoload -Uz compinit
