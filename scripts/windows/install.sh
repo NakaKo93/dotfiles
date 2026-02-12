@@ -28,6 +28,18 @@ install_file "$DOTFILES/ssh/.ssh/config.example" "$HOME/.ssh/config.example"
 # zshrc
 install_file "$DOTFILES/zsh/.zshrc" "$HOME/.zshrc"
 
+# vscode
+VSCODE_DIR="$HOME/AppData/Roaming/Code/User"
+
+install_file "$DOTFILES/vscode/settings.json"    "$VSCODE_DIR/settings.json"
+install_file "$DOTFILES/vscode/keybindings.json" "$VSCODE_DIR/keybindings.json"
+
+if command -v code >/dev/null 2>&1; then
+  while read -r ext; do
+    code --install-extension "$ext" --force
+  done < "$DOTFILES/vscode/extensions.txt"
+fi
+
 # z
 if [ ! -d "$HOME/z" ]; then
   git clone https://github.com/rupa/z.git "$HOME/z"

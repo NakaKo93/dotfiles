@@ -25,3 +25,13 @@ update_file "$HOME/.ssh/config.example" "$DOTFILES/ssh/.ssh/config.example"
 
 # zshrc
 update_file "$HOME/.zshrc" "$DOTFILES/zsh/.zshrc"
+
+# vscode
+VSCODE_DIR="$HOME/AppData/Roaming/Code/User"
+
+update_file "$VSCODE_DIR/settings.json"    "$DOTFILES/vscode/settings.json"
+update_file "$VSCODE_DIR/keybindings.json" "$DOTFILES/vscode/keybindings.json"
+
+if command -v code >/dev/null 2>&1; then
+  code --list-extensions > "$DOTFILES/vscode/extensions.txt"
+fi
