@@ -1,6 +1,18 @@
 # dotfiles
 ## Windows Usage
 These scripts are intended for Windows with Git Bash.
+
+### bootstrap
+- Install required tools and external dependencies.
+- Installs Scoop (if not already installed)
+- Installs development tools (ripgrep, vscode, etc.)
+- Installs fzf and z (if configured)
+- Prepares the environment before applying dotfiles
+```bash
+./scripts/windows/bootstrap.sh
+```
+Run this once when setting up a new machine.
+
 ### install
 Copy dotfiles from this repository to your local $HOME.
 - Existing files will be backed up with .bak
