@@ -10,13 +10,23 @@ shopt -s histappend
 export _Z_CMD="z"
 [ -r "$HOME/z/z.sh" ] && source "$HOME/z/z.sh"
 
+# ---------- fzf ----------
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+export FZF_DEFAULT_COMMAND='rg --files --hidden --glob "!.git"'
+export FZF_ALT_C_COMMAND='rg --files --hidden --glob "!.git" -g "*/"'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
+
 # ---------- Aliases ----------
 alias dcu='docker compose up'
 alias dcd='docker compose down'
 alias dps='docker ps'
+
 alias la='ls -la'
 alias ll='ls -lh --color=auto'
 alias l='ls -CF'
+
 alias gsu='git status -u'
 alias gco='git checkout'
 alias gcob='git checkout -b'
@@ -33,8 +43,6 @@ alias ga='git add'
 alias gp='git push'
 alias gcm='git commit -m'
 alias gcp='git cherry-pick'
-
-alias dcuj='docker compose up -d redis db && sleep 3 && docker compose up -d'
 
 # ---------- Functions ----------
 mkcd() {
@@ -67,3 +75,51 @@ export EDITOR=vim
 bind 'set completion-ignore-case on'
 bind 'set show-all-if-ambiguous on'
 bind 'set bell-style none'
+
+# ---------- Functions ----------
+
+# checkout git branch (including remote branches)
+# https://github.com/junegunn/fzf/wiki/Examples#git
+gcof() {
+  local branches branch
+  branches=$(git branch --all | grep -v HEAD) &&
+  branch=$(echo "$branches" |
+           fzf-tmux -d $(( 2 + $(wc -l <<< "$branches") )) +m) &&
+  git checkout $(echo "$branch" | sed "s/.* //" | sed "s#remotes/[^/]*/##")
+}
+
+# Interactive cd
+# https://github.com/junegunn/fzf/wiki/Examples#interactive-cd
+cdfd() {
+    if [[ "$#" != 0 ]]; then
+        builtin cd "$@";
+        return
+    fi
+    while true; do
+        local lsd=$(echo ".." && ls -p | grep '/$' | sed 's;/$;;')
+        local dir="$(printf '%s\n' "${lsd[@]}" |
+            fzf --reverse --preview '
+                __cd_nxt="$(echo {})";
+                __cd_path="$(echo $(pwd)/${__cd_nxt} | sed "s;//;/;")";
+                echo $__cd_path;
+                echo;
+                ls -p --color=always "${__cd_path}";
+        ')"
+        [[ ${#dir} != 0 ]] || return 0
+        builtin cd "$dir" &> /dev/null
+    done
+}
+
+# cd into the selected directory
+# https://github.com/junegunn/fzf/wiki/Examples#changing-directory
+cdf() {
+  DIR=`find * -maxdepth 0 -type d -print 2> /dev/null | fzf-tmux` \
+    && cd "$DIR"
+}
+
+# Jump by z score (highest first)
+# https://github.com/junegunn/fzf/wiki/Examples#z
+cdz() {
+  [ $# -gt 0 ] && _z "$*" && return
+  cd "$(_z -l 2>&1 | fzf --height 40% --nth 2.. --reverse --inline-info +s --tac --query "${*##-* }" | sed 's/^[0-9,.]* *//')"
+}

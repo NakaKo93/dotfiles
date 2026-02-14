@@ -35,3 +35,5 @@ update_file "$VSCODE_DIR/keybindings.json" "$DOTFILES/vscode/keybindings.json"
 if command -v code >/dev/null 2>&1; then
   code --list-extensions > "$DOTFILES/vscode/extensions.txt"
 fi
+
+echo "Update completed."

@@ -10,6 +10,8 @@ install_file() {
     local dotfile="$1"
     local localfile="$2"
 
+    mkdir -p "$(dirname "$localfile")"
+
     # back it up before overwriting if the destination exists.
     if [ -e "$localfile" ]; then
         mv "$localfile" "$localfile.bak"
@@ -40,7 +42,4 @@ if command -v code >/dev/null 2>&1; then
   done < "$DOTFILES/vscode/extensions.txt"
 fi
 
-# z
-if [ ! -d "$HOME/z" ]; then
-  git clone https://github.com/rupa/z.git "$HOME/z"
-fi
+echo "Install completed."
