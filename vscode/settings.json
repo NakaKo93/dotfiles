@@ -150,7 +150,7 @@
     "terminal.integrated.cursorStyle": "line",
     "terminal.integrated.enableVisualBell": true,
     "terminal.integrated.mouseWheelZoom": true,
-    "terminal.integrated.fontSize": 16,
+    "terminal.integrated.fontSize": 17,
 
     // =========================
     // Markdown / Preview
