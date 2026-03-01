@@ -1,253 +1,297 @@
 {
-    // =========================
-    // Language / Tools
-    // =========================
-    "phpcs.standard": "PSR2",
+  // =========================
+  // Language / Tools
+  // =========================
+  "phpcs.standard": "PSR2",
 
-    "python.defaultInterpreterPath": "${env:USERPROFILE}\\miniconda3\\python.exe",
-    "[python]": {
-        "diffEditor.ignoreTrimWhitespace": false,
-        "editor.formatOnType": true,
-        "editor.wordBasedSuggestions": "off"
-    },
+  "python.defaultInterpreterPath": "${env:USERPROFILE}\\miniconda3\\python.exe",
+  "[python]": {
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.formatOnType": true,
+    "editor.wordBasedSuggestions": "off"
+  },
 
-    "[dockercompose]": {
-        "editor.insertSpaces": true,
-        "editor.tabSize": 2,
-        "editor.autoIndent": "advanced",
-        "editor.quickSuggestions": {
-            "other": true,
-            "comments": false,
-            "strings": true
-        },
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-    "[github-actions-workflow]": {
-        "editor.defaultFormatter": "redhat.vscode-yaml"
-    },
-
-    // =========================
-    // Files / Explorer
-    // =========================
-    "files.associations": {
-        "*.tpl": "html",
-        "*.appsemblerc.yaml": "plaintext"
-    },
-    "files.insertFinalNewline": true,
-
-    "explorer.confirmDelete": false,
-    "explorer.compactFolders": false,
-
-    // =========================
-    // Workbench (Theme / UI)
-    // =========================
-    "workbench.colorTheme": "One Monokai",
-    "workbench.iconTheme": "gruvbox-material-icon-theme",
-    "workbench.colorCustomizations": {
-        "editorIndentGuide.background1": "#50505080",
-        "editorIndentGuide.background2": "#6A6A6A80",
-        "editorIndentGuide.background3": "#50505080",
-        "editorIndentGuide.background4": "#6A6A6A80",
-        "editorIndentGuide.background5": "#50505080",
-        "editorIndentGuide.background6": "#6A6A6A80",
-        "editorIndentGuide.activeBackground1": "#8A8A8A",
-        "editorIndentGuide.activeBackground2": "#8A8A8A",
-        "editorIndentGuide.activeBackground3": "#8A8A8A",
-        "editorIndentGuide.activeBackground4": "#8A8A8A",
-        "editorIndentGuide.activeBackground5": "#8A8A8A",
-        "editorIndentGuide.activeBackground6": "#8A8A8A"
-    },
-
-    "workbench.tree.indent": 17,
-    "workbench.editor.closeOnFileDelete": true,
-    "workbench.editor.pinnedTabsOnSeparateRow": true,
-    "workbench.editor.scrollToSwitchTabs": true,
-    "workbench.view.alwaysShowHeaderActions": true,
-
-    // =========================
-    // Editor (Core)
-    // =========================
+  "[dockercompose]": {
     "editor.insertSpaces": true,
-    "editor.tabSize": 4,
-    "editor.detectIndentation": false,
-
-    "editor.renderWhitespace": "all",
-    "editor.rulers": [80, 120],
-    "editor.wordWrap": "off",
-    "editor.wrappingIndent": "indent",
-
-    "editor.suggestSelection": "first",
-    "editor.acceptSuggestionOnEnter": "off",
-    "editor.snippetSuggestions": "top",
-
-    "emmet.triggerExpansionOnTab": true,
-
-    "editor.unicodeHighlight.invisibleCharacters": false,
-    "editor.unicodeHighlight.nonBasicASCII": false,
-
-    "diffEditor.experimental.useTrueInlineView": true,
-
-    "editor.bracketPairColorization.enabled": true,
-    "editor.guides.bracketPairs": true,
-
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.cursorStyle": "line-thin",
-    "editor.dragAndDrop": false,
-    "editor.mouseWheelZoom": true,
-    "editor.renderLineHighlight": "all",
-    "editor.showFoldingControls": "always",
-    "editor.smoothScrolling": true,
-    "editor.wordSegmenterLocales": ["ja"],
-
-    // Minimap
-    "editor.minimap.enabled": true,
-    "editor.minimap.renderCharacters": false,
-    "editor.minimap.showSlider": "always",
-    "editor.minimap.maxColumn": 80,
-
-    // =========================
-    // Search / SCM / Git
-    // =========================
-    "search.showLineNumbers": true,
-
-    "scm.alwaysShowRepositories": true,
-    "scm.defaultViewMode": "tree",
-    "scm.diffDecorationsGutterWidth": 4,
-    "scm.graph.badges": "all",
-
-    "git.openRepositoryInParentFolders": "never",
-    "git-graph.date.format": "ISO Date & Time",
-
-    // =========================
-    // Terminal (Windows)
-    // =========================
-    "terminal.integrated.profiles.windows": {
-        "PowerShell": {
-            "source": "PowerShell",
-            "icon": "terminal-powershell"
-        },
-        "Command Prompt": {
-            "path": [
-            "${env:windir}\\Sysnative\\cmd.exe",
-            "${env:windir}\\System32\\cmd.exe"
-            ],
-            "args": [],
-            "icon": "terminal-cmd"
-        },
-        "Git Bash": {
-            "source": "Git Bash"
-        },
-        "Anaconda Prompt (cmd)": {
-            "path": "C:\\Windows\\system32\\cmd.exe",
-            "args": [
-            "/K",
-            "C:\\Users\\nakakou\\miniconda3\\Scripts\\activate.bat",
-            "C:\\Users\\nakakou\\miniconda3"
-            ]
-        }
+    "editor.tabSize": 2,
+    "editor.autoIndent": "advanced",
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": false,
+      "strings": true
     },
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.cursorStyle": "line",
-    "terminal.integrated.enableVisualBell": true,
-    "terminal.integrated.mouseWheelZoom": true,
-    "terminal.integrated.fontSize": 17,
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[github-actions-workflow]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
 
-    // =========================
-    // Markdown / Preview
-    // =========================
-    "markdown-preview-enhanced.previewTheme": "one-dark.css",
-    "markdown-preview-enhanced.revealjsTheme": "blood.css",
+  // =========================
+  // Files / Explorer
+  // =========================
+  "files.associations": {
+    "*.tpl": "html",
+    "*.appsemblerc.yaml": "plaintext"
+  },
+  "files.insertFinalNewline": true,
 
-    // =========================
-    // Extensions: Code Runner
-    // =========================
-    "code-runner.runInTerminal": true,
+  "explorer.confirmDelete": false,
+  "explorer.compactFolders": false,
 
-    // =========================
-    // Extensions: Comments / TODO
-    // =========================
-    "better-comments.tags": [
-        {
-            "tag": "INFO:",
-            "color": "#3498DB",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "TODO:",
-            "color": "#FF8C00",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "HACK:",
-            "color": "#D516D5FF",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        },
-        {
-            "tag": "FIXME:",
-            "color": "#FF2D00",
-            "strikethrough": false,
-            "underline": false,
-            "backgroundColor": "transparent",
-            "bold": false,
-            "italic": false
-        }
-    ],
-    "todo-tree.general.tags": ["INFO:", "TODO:", "HACK:", "FIXME:"],
-    "todo-tree.highlights.customHighlight": {
-        "INFO:": {
-            "icon": "info",
-            "foreground": "#3498DB",
-            "iconColour": "#3498DB"
-        },
-        "TODO:": {
-            "icon": "check",
-            "foreground": "#FF8C00",
-            "iconColour": "#FF8C00"
-        },
-        "HACK:": {
-            "icon": "tools",
-            "foreground": "#D516D5FF",
-            "iconColour": "#D516D5FF"
-        },
-        "FIXME:": {
-            "icon": "flame",
-            "foreground": "#FF2D00",
-            "iconColour": "#FF2D00"
-        }
+  // =========================
+  // Workbench (Theme / UI)
+  // =========================
+  "workbench.colorTheme": "One Monokai",
+  "workbench.iconTheme": "gruvbox-material-icon-theme",
+
+  "workbench.tree.indent": 17,
+  "workbench.editor.closeOnFileDelete": true,
+  "workbench.editor.pinnedTabsOnSeparateRow": true,
+  "workbench.editor.scrollToSwitchTabs": true,
+  "workbench.view.alwaysShowHeaderActions": true,
+
+  // =========================
+  // Editor (Core)
+  // =========================
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [80, 120],
+  "editor.wordWrap": "off",
+  "editor.wrappingIndent": "indent",
+
+  "editor.suggestSelection": "first",
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.snippetSuggestions": "top",
+
+  "emmet.triggerExpansionOnTab": true,
+
+  "editor.unicodeHighlight.invisibleCharacters": false,
+  "editor.unicodeHighlight.nonBasicASCII": false,
+
+  "diffEditor.experimental.useTrueInlineView": true,
+
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": true,
+
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorStyle": "line-thin",
+  "editor.dragAndDrop": false,
+  "editor.mouseWheelZoom": true,
+  "editor.renderLineHighlight": "all",
+  "editor.showFoldingControls": "always",
+  "editor.smoothScrolling": true,
+  "editor.wordSegmenterLocales": ["ja"],
+
+  // Minimap
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.showSlider": "always",
+  "editor.minimap.maxColumn": 80,
+
+  // =========================
+  // Language Specific Indent
+  // =========================
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[javascriptreact]": {
+    "editor.tabSize": 2
+  },
+  "[typescriptreact]": {
+    "editor.tabSize": 2
+  },
+  "[json]": {
+    "editor.tabSize": 2
+  },
+  "[jsonc]": {
+    "editor.tabSize": 2
+  },
+  "[html]": {
+    "editor.tabSize": 2
+  },
+  "[css]": {
+    "editor.tabSize": 2
+  },
+  "[scss]": {
+    "editor.tabSize": 2
+  },
+  "[yaml]": {
+    "editor.tabSize": 2
+  },
+  "[markdown]": {
+    "editor.tabSize": 2
+  },
+  "[go]": {
+    "editor.insertSpaces": false
+  },
+  "[php]": {
+    "editor.tabSize": 4
+  },
+  "[java]": {
+    "editor.tabSize": 4
+  },
+  "[c]": {
+    "editor.tabSize": 4
+  },
+  "[cpp]": {
+    "editor.tabSize": 4
+  },
+
+  // =========================
+  // Search / SCM / Git
+  // =========================
+  "search.showLineNumbers": true,
+
+  "scm.alwaysShowRepositories": true,
+  "scm.defaultViewMode": "tree",
+  "scm.diffDecorationsGutterWidth": 4,
+  "scm.graph.badges": "all",
+
+  "git.openRepositoryInParentFolders": "never",
+  "git-graph.date.format": "ISO Date & Time",
+
+  // =========================
+  // Terminal (Windows)
+  // =========================
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
     },
+    "Command Prompt": {
+      "path": [
+        "${env:windir}\\Sysnative\\cmd.exe",
+        "${env:windir}\\System32\\cmd.exe"
+      ],
+      "args": [],
+      "icon": "terminal-cmd"
+    },
+    "Git Bash": {
+      "source": "Git Bash"
+    },
+    "Anaconda Prompt (cmd)": {
+      "path": "C:\\Windows\\system32\\cmd.exe",
+      "args": [
+        "/K",
+        "C:\\Users\\nakakou\\miniconda3\\Scripts\\activate.bat",
+        "C:\\Users\\nakakou\\miniconda3"
+      ]
+    }
+  },
+  "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.enableVisualBell": true,
+  "terminal.integrated.mouseWheelZoom": true,
+  "terminal.integrated.fontSize": 17,
 
-    // =========================
-    // Extensions: Indent / Error Lens
-    // =========================
-    "indentRainbow.colors": [],
+  // =========================
+  // Markdown / Preview
+  // =========================
+  "markdown-preview-enhanced.previewTheme": "one-dark.css",
+  "markdown-preview-enhanced.revealjsTheme": "blood.css",
 
-    "errorLens.fontStyleItalic": true,
-    "errorLens.followCursor": "activeLine",
-    "errorLens.onSave": true,
-    "errorLens.fontSize": "11px",
-    "errorLens.messageTemplate": "[$count] $severity $message $source($code)",
-    "errorLens.severityText": ["❌", "⚠", "ℹ", "📗"],
+  // =========================
+  // Extensions: Code Runner
+  // =========================
+  "code-runner.runInTerminal": true,
 
-    // =========================
-    // Extensions: Spell Checker
-    // =========================
-    "cSpell.useGitignore": true,
-    "cSpell.ignoreRegExpList": [
-        "[A-Za-z0-9+/=]{80,}",
-        "https?://\\S+",
-        "[\\w.+-]+@[\\w.-]+"
-    ],
-    "cSpell.ignorePaths": ["**/*memo.txt"]
+  // =========================
+  // Extensions: Comments / TODO
+  // =========================
+  "better-comments.tags": [
+    {
+      "tag": "INFO:",
+      "color": "#3498DB",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "TODO:",
+      "color": "#FF8C00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "HACK:",
+      "color": "#D516D5FF",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    },
+    {
+      "tag": "FIXME:",
+      "color": "#FF2D00",
+      "strikethrough": false,
+      "underline": false,
+      "backgroundColor": "transparent",
+      "bold": false,
+      "italic": false
+    }
+  ],
+  "todo-tree.general.tags": ["INFO:", "TODO:", "HACK:", "FIXME:"],
+  "todo-tree.highlights.customHighlight": {
+    "INFO:": {
+      "icon": "info",
+      "foreground": "#3498DB",
+      "iconColour": "#3498DB"
+    },
+    "TODO:": {
+      "icon": "check",
+      "foreground": "#FF8C00",
+      "iconColour": "#FF8C00"
+    },
+    "HACK:": {
+      "icon": "tools",
+      "foreground": "#D516D5FF",
+      "iconColour": "#D516D5FF"
+    },
+    "FIXME:": {
+      "icon": "flame",
+      "foreground": "#FF2D00",
+      "iconColour": "#FF2D00"
+    }
+  },
+
+  // =========================
+  // Extensions: Indent / Error Lens
+  // =========================
+  "indentRainbow.colors": [],
+
+  "errorLens.fontStyleItalic": true,
+  "errorLens.followCursor": "activeLine",
+  "errorLens.onSave": true,
+  "errorLens.fontSize": "11px",
+  "errorLens.messageTemplate": "[$count] $severity $message $source($code)",
+  "errorLens.severityText": ["❌", "⚠", "ℹ", "📗"],
+
+  // =========================
+  // Extensions: Spell Checker
+  // =========================
+  "cSpell.useGitignore": true,
+  "cSpell.ignoreRegExpList": [
+    "[A-Za-z0-9+/=]{80,}",
+    "https?://\\S+",
+    "[\\w.+-]+@[\\w.-]+"
+  ],
+  "cSpell.ignorePaths": [
+    "**/*memo.txt"
+  ],
+  "window.zoomLevel": 2,
+  "terminal.integrated.defaultLocation": "editor",
+  "workbench.panel.defaultLocation": "right",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "explorer.confirmDragAndDrop": false
 }
