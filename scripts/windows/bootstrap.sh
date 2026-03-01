@@ -14,6 +14,9 @@ PACKAGES=(
   ripgrep   # fast search (rg)
   fzf       # fuzzy finder
   vscode    # editor
+  nodejs    # required for npm
+  gh        # gh
+  jq        # JSON processor (parse JSON in shell)
 )
 
 for pkg in "${PACKAGES[@]}"; do
@@ -26,6 +29,11 @@ done
 # z
 if [ ! -d "$HOME/z" ]; then
   git clone --depth 1 https://github.com/rupa/z.git "$HOME/z"
+fi
+
+# Install OpenAI Codex CLI via npm
+if ! command -v codex >/dev/null 2>&1; then
+  npm install -g @openai/codex
 fi
 
 echo "Bootstrap completed."

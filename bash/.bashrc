@@ -1,3 +1,8 @@
+# ---------- Language ----------
+export LANG=ja_JP.UTF-8
+export LC_ALL=ja_JP.UTF-8
+export PYTHONIOENCODING=utf-8
+
 # ---------- History ----------
 export HISTFILE="$HOME/.bash_history"
 export HISTSIZE=1000
